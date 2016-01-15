@@ -117,25 +117,21 @@
     			color: white;
     		}
 
-    		.exec .nametag-content {
+    		.Exec .nametag-content {
     			background-image: url("exec.svg");
     		}
-    		.exec .name {
+    		.Exec .name {
     			color: #062946;
     		}
-    		.exec .organization {
+    		.Exec .organization {
     			color: #062946;
     		}
 
-    		.sponsor .nametag-content {
+    		.Sponsor .nametag-content {
     			background-image: url("sponsor.svg");
     		}
 
-    		.vip .nametag-content {
-    			background-image: url("vip_judge.svg");
-    		}
-
-    		.judge .nametag-content {
+    		.VIP .nametag-content {
     			background-image: url("vip_judge.svg");
     		}
 
@@ -143,19 +139,11 @@
     			background-image: url("vip_judge.svg");
     		}
 
-    		.mentors .nametag-content {
+    		.Mentor .nametag-content {
     			background-image: url("mentor.svg");
     		}
 
-    		.mentor .nametag-content {
-    			background-image: url("mentor.svg");
-    		}
-
-    		.committee .nametag-content {
-    			background-image: url("comitee.svg");
-    		}
-
-    		.commitee .nametag-content {
+    		.Committee .nametag-content {
     			background-image: url("comitee.svg");
     		}
 
@@ -172,13 +160,11 @@
 	</head>
 	<body>
 		<div id="nametags" ng-controller="NametagsController as nametags">
-			<div class="nametag" ng-repeat="nametag in nametags" ng-class="nametag.image">
+			<div class="nametag" ng-repeat="nametag in nametags" ng-class="nametag.type">
 				<div class="nametag-content">
 					<div class="name-wrap">
-						<div class="name">{{nametag.First}} {{nametag.Surname}}</div>
-						<div class="organization">{{nametag.Title}}</div>
-						<!--<div class="organization">{{nametag.Title}}</div>
-						<div class="name">{{nametag.First}}</div>-->
+						<div class="name">{{nametag.name}}</div>
+						<div class="organization">{{nametag.company}}</div>
 					</div>
 				</div>
 			</div>
